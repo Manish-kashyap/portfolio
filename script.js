@@ -6,7 +6,7 @@ const certificates = [
   'certificates/cert5.jpg',
   'certificates/cert6.jpg',
   'certificates/cert7.jpg',
-  'certificates/cert8.jpg'
+  'certificates/cert8.jpg',
 ];
 
 let currentCert = 0;
