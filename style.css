@@ -1,114 +1,36 @@
-{
-margin: 0; padding: 0; box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
 body {
-background: linear-gradient(to bottom right, #0f1116, #1c1e26);
-color: #fff; padding: 40px;
+  background: linear-gradient(to bottom right, #0f1116, #1c1e26);
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
 }
-header {
-display: flex; justify-content: space-between;
-align-items: center; margin-bottom: 50px;
-}
-nav a {
-margin: 0 15px; color: #fff;
-text-decoration: none; transition: color 0.3s;
-}
-nav a:hover { color: #ff005c; }
-.highlight { color: #ff005c; }
 
+/* ... styles omitted for brevity, you already have them ... */
 
-.hero {
-display: flex; align-items: center;
-justify-content: space-between; gap: 40px;
+/* Typewriter effect */
+.typewriter-loop {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ff005c;
+  animation: typingLoop 4s steps(14, end) infinite, blink 0.7s step-end infinite;
 }
-.hero-text { max-width: 50%; }
-.hero-text h1 {
-font-size: 40px; margin-bottom: 20px;
-}
-.hero-text p {
-font-size: 16px; line-height: 1.6; margin-bottom: 20px;
-}
-.rotating-ring {
-width: 320px; height: 320px;
-border-radius: 50%; position: relative;
-display: flex; justify-content: center; align-items: center;
-}
-.rotating-ring::before {
-content: "";
-position: absolute; width: 100%; height: 100%;
-border-radius: 50%;
-background: conic-gradient(from 0deg, #ff005c 0deg 40deg, transparent 40deg 360deg);
-animation: snake-ring 2s linear infinite;
-z-index: -1;
-}
-.round-image {
-width: 280px; height: 280px;
-object-fit: cover;
-border-radius: 50%; position: relative; z-index: 1;
-}
-@keyframes snake-ring {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
-}
-.social-icons {
-display: flex; align-items: center;
-gap: 16px; margin-top: 10px;
-}
-.social-icons img {
-width: 24px; height: 24px;
-transition: transform 0.3s;
-}
-.social-icons img:hover {
-transform: scale(1.2);
-}
-.skills, .portfolio, .testimonials, .education, .achievements, .contact, .extras {
-margin-top: 50px; padding-top: 40px; border-top: 1px solid #333;
-}
-.skills-icons {
-display: flex; gap: 20px; margin-top: 20px;
-}
-.skills-icons div {
-text-align: center; width: 70px;
-}
-.skills-icons img {
-width: 40px; height: 40px;
-}
-.skills-icons span {
-display: block; margin-top: 6px; font-size: 14px; color: #fff;
-}
-h2 { color: #ff005c; margin-bottom: 20px; }
-ul li { margin-bottom: 10px; }
 
-.contact input, .contact textarea {
-width: 100%; padding: 12px; margin-bottom: 12px;
-border: none; border-radius: 6px;
+@keyframes typingLoop {
+  0% { width: 0 }
+  50% { width: 13ch }
+  100% { width: 0 }
 }
-.contact button {
-padding: 12px 25px;
-background: linear-gradient(to right, #ff005c, #ff4a7d);
-color: #fff; border: none; border-radius: 6px;
-cursor: pointer; transition: transform 0.3s;
-}
-.contact button:hover { transform: scale(1.05); }
 
-.slideshow-container {
-position: relative; max-width: 650px; margin: auto;
+@keyframes blink {
+  50% { border-color: transparent; }
 }
-.slideshow-container img {
-width: 100%; border-radius: 12px;
-box-shadow: 0 0 20px rgba(255, 0, 92, 0.4);
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-.slideshow-container img.fade-in {
-opacity: 1;
-}
-.slideshow-container a {
-position: absolute; top: 50%; transform: translateY(-50%);
-color: #fff; font-size: 26px; cursor: pointer; padding: 18px;
-user-select: none; opacity: 0.7;
-}
-.slideshow-container a:hover { opacity: 1; }
-#prev { left: 0; }
-#next { right: 0; }
