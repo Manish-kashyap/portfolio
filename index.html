@@ -1,267 +1,104 @@
- <!DOCTYPE html>  <html lang="en">  
-<head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
-  <title>Manish Kashyap - Data Scientist</title>  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">  
-  <style>  
-    * {  
-      margin: 0; padding: 0; box-sizing: border-box;  
-      font-family: 'Poppins', sans-serif;  
-    }  
-    body {  
-      background: linear-gradient(to bottom right, #0f1116, #1c1e26);  
-      color: #fff; padding: 20px;  
-      min-height: 100vh;  
-    }  
-    header {  
-      display: flex; justify-content: space-between;  
-      align-items: center; margin-bottom: 40px; flex-wrap: wrap;  
-    }  
-    nav {  
-      display: flex; flex-wrap: wrap; gap: 15px;  
-    }  
-    nav a {  
-      color: #fff; text-decoration: none; transition: color 0.3s;  
-      font-size: 1rem;  
-    }  
-    nav a:hover { color: #ff005c; }  
-    .highlight { color: #ff005c; }  .hero {  
-  display: flex; align-items: center; justify-content: space-between;  
-  gap: 20px; flex-wrap: wrap; margin-bottom: 40px;  
-}  
-.hero-text {  
-  flex: 1; min-width: 300px; max-width: 600px;  
-}  
-.hero-text h1 {  
-  font-size: clamp(28px, 5vw, 36px); margin-bottom: 15px;  
-}  
-.hero-text p {  
-  font-size: clamp(14px, 2.5vw, 16px); line-height: 1.6; margin-bottom: 15px;  
-}  
-.rotating-ring {  
-  width: clamp(200px, 40vw, 300px); height: clamp(200px, 40vw, 300px);  
-  border-radius: 50%; position: relative;  
-  display: flex; justify-content: center; align-items: center;  
-  flex-shrink: 0;  
-}  
-.rotating-ring::before {  
-  content: ""; position: absolute; width: 100%; height: 100%;  
-  border-radius: 50%;  
-  background: conic-gradient(from 0deg, #ff005c 0deg 40deg, transparent 40deg 360deg);  
-  animation: snake-ring 2s linear infinite;  
-  z-index: 0;  
-}  
-.round-image {  
-  width: 90%; height: 90%; object-fit: cover;  
-  border-radius: 50%; position: relative; z-index: 1;  
-}  
-@keyframes snake-ring {  
-  0% { transform: rotate(0deg); }  
-  100% { transform: rotate(360deg); }  
-}  
-.social-icons {  
-  display: flex; align-items: center; gap: 12px; margin-top: 10px;  
-}  
-.social-icons img {  
-  width: 24px; height: 24px; transition: transform 0.3s;  
-}  
-.social-icons img:hover {  
-  transform: scale(1.2);  
-}  
-.skills, .portfolio, .testimonials, .education, .achievements, .contact, .extras {  
-  margin-top: 40px; padding-top: 30px; border-top: 1px solid #333;  
-}  
-.skills-icons {  
-  display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;  
-  justify-content: center;  
-}  
-.skills-icons div {  
-  text-align: center; width: 80px;  
-}  
-.skills-icons img {  
-  width: 40px; height: 40px;  
-}  
-.skills-icons span {  
-  display: block; margin-top: 6px; font-size: 14px; color: #fff;  
-}  
-h2 {  
-  color: #ff005c; margin-bottom: 15px; font-size: clamp(20px, 4vw, 24px);  
-}  
-ul li { margin-bottom: 8px; }  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manish Kashyap - Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><span class="highlight">Manish</span>Here</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-.contact input, .contact textarea {  
-  width: 100%; padding: 12px; margin-bottom: 12px;  
-  border: 1px solid #444; border-radius: 6px;  
-  background: #222; color: #fff;  
-  transition: border-color 0.3s;  
-}  
-.contact input:focus, .contact textarea:focus {  
-  border-color: #ff005c; outline: none;  
-}  
-.contact button {  
-  padding: 12px 25px;  
-  background: linear-gradient(to right, #ff005c, #ff4a7d);  
-  color: #fff; border: none; border-radius: 6px;  
-  cursor: pointer; transition: transform 0.3s;  
-}  
-.contact button:hover { transform: scale(1.05); }  
+  <section class="hero" id="about">
+    <div class="hero-text">
+      <h1>Hi, I’m <span class="highlight">Manish Kashyap</span><br />a Professional Data Scientist.</h1>
+      <p>I specialize in data analysis, machine learning, and visualization. With a strong foundation in Python and BI tools, I enjoy transforming raw data into impactful insights.</p>
+      <div class="social-icons">
+        <a href="https://github.com/Manish-kashyap" target="_blank"><img src="icons/github.svg" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/manish-kashyap" target="_blank"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/manishkashyap" target="_blank"><img src="icons/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/manishkashyap" target="_blank"><img src="icons/facebook.svg" alt="Facebook"></a>
+      </div>
+    </div>
+    <div class="rotating-ring">
+      <img src="image/manish.jpg" alt="Manish Kashyap" class="round-image">
+    </div>
+  </section>
 
-.slideshow-container {  
-  position: relative; max-width: clamp(300px, 80vw, 600px); margin: auto;  
-}  
-.slideshow-container img {  
-  width: 100%; border-radius: 12px;  
-  box-shadow: 0 0 20px rgba(255, 0, 92, 0.4);  
-  opacity: 0; transition: opacity 0.5s ease-in-out;  
-}  
-.slideshow-container img.fade-in {  
-  opacity: 1;  
-}  
-.slideshow-container a {  
-  position: absolute; top: 50%; transform: translateY(-50%);  
-  color: #fff; font-size: 24px; cursor: pointer; padding: 10px;  
-  user-select: none; opacity: 0.7; background: rgba(0, 0, 0, 0.5);  
-  border-radius: 50%;  
-}  
-.slideshow-container a:hover { opacity: 1; }  
-#prev { left: 10px; }  
-#next { right: 10px; }  
+  <section class="skills" id="skills">
+    <h2>Best Skills</h2>
+    <div class="skills-icons">
+      <div><img src="icons/Python.svg" alt="Python"><span>Python</span></div>
+      <div><img src="icons/sql.svg" alt="SQL"><span>SQL</span></div>
+      <div><img src="icons/powerbi.svg" alt="Power BI"><span>Power BI</span></div>
+      <div><img src="icons/tableau.svg" alt="Tableau"><span>Tableau</span></div>
+      <div><img src="icons/excel.svg" alt="Excel"><span>Excel</span></div>
+    </div>
+  </section>
 
-@media (max-width: 768px) {  
-  header { flex-direction: column; gap: 15px; }  
-  nav { justify-content: center; }  
-  .hero { flex-direction: column; align-items: center; }  
-  .hero-text { max-width: 100%; text-align: center; }  
-  .social-icons { justify-content: center; }  
-  .rotating-ring { margin-top: 20px; }  
-}
+  <section class="portfolio" id="portfolio">
+    <h2>Portfolio - Data Visualization</h2>
+    <p>Coming Soon: My interactive dashboards and reports will be displayed here.</p>
+  </section>
 
-  </style>  
-</head>  
-<body>  
-  <header>  
-    <h1><span class="highlight">Manish</span>Here</h1>  
-    <nav>  
-      <a href="#about">About</a>  
-      <a href="#skills">Skills</a>  
-      <a href="#portfolio">Portfolio</a>  
-      <a href="#contact">Contact</a>  
-    </nav>  
-  </header>    <section class="hero" id="about">  
-    <div class="hero-text">  
-      <h1>Hi, I’m <span class="highlight">Manish Kashyap</span><br />a Professional Data Scientist.</h1>  
-      <p>I specialize in data analysis, machine learning, and visualization. With a strong foundation in Python and BI tools, I enjoy transforming raw data into impactful insights.</p>  
-      <div class="social-icons">  
-        <a href="https://github.com/Manish-kashyap" target="_blank" aria-label="GitHub Profile"><img src="icons/github.svg" alt="GitHub Icon"></a>  
-        <a href="https://www.linkedin.com/in/manish-kashyap" target="_blank" aria-label="LinkedIn Profile"><img src="icons/linkedin.svg" alt="LinkedIn Icon"></a>  
-        <a href="https://www.instagram.com/manishkashyap" target="_blank" aria-label="Instagram Profile"><img src="icons/instagram.svg" alt="Instagram Icon"></a>  
-        <a href="https://www.facebook.com/manishkashyap" target="_blank" aria-label="Facebook Profile"><img src="icons/facebook.svg" alt="Facebook Icon"></a>  
-      </div>  
-    </div>  
-    <div class="rotating-ring">  
-      <img src="image/manish.jpg" alt="Manish Kashyap Profile Picture" class="round-image">  
-    </div>  
-  </section>    <section class="skills" id="skills">  
-    <h2>Best Skills</h2>  
-    <div class="skills-icons">  
-      <div><img src="icons/Python.svg" alt="Python Icon"><span>Python</span></div>  
-      <div><img src="icons/sql.svg" alt="SQL Icon"><span>SQL</span></div>  
-      <div><img src="icons/powerbi.svg" alt="Power BI Icon"><span>Power BI</span></div>  
-      <div><img src="icons/tableau.svg" alt="Tableau Icon"><span>Tableau</span></div>  
-      <div><img src="icons/excel.svg" alt="Excel Icon"><span>Excel</span></div>  
-    </div>  
-  </section>    <section class="portfolio" id="portfolio">  
-    <h2>Portfolio - Data Visualization</h2>  
-    <p>Coming Soon: My interactive dashboards and reports will be displayed here.</p>  
-  </section>    <section class="testimonials">  
-    <h2>Testimonials</h2>  
-    <p>“Manish is a detail-oriented data scientist with exceptional analytical skills.”</p>  
-    <p>“His ability to turn complex data into understandable visuals is outstanding.”</p>  
-    <p>“Manish’s dashboards have helped our team make faster and smarter decisions.”</p>  
-  </section>    <section class="education" id="education">  
-    <h2>Education</h2>  
-    <div class="edu-item">  
-      <h3>B.Tech in Computer Science</h3>  
-      <p><strong>Specialization:</strong> Artificial Intelligence, Machine Learning, Deep Learning</p>  
-      <p><strong>Institution:</strong> Teerthanker Mahaveer University, Moradabad</p>  
-      <p><strong>Focus Areas:</strong> Data Science, Python, Machine Learning</p>  
-    </div>  
-  </section>    <section class="achievements" id="achievements">  
-    <h2>Achievements</h2>  
-    <div class="slideshow-container">  
-      <img id="cert-slide" src="certificates/cert1.jpg" alt="Achievement Certificate">  
-      <a id="prev" aria-label="Previous Certificate">❮</a>  
-      <a id="next" aria-label="Next Certificate">❯</a>  
-    </div>  
-  </section>    <section class="contact" id="contact">  
-    <h2>Contact Me</h2>  
-    <form action="https://formspree.io/f/xqalpopv" method="POST">  
-      <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">  
-      <input type="email" name="_replyto" placeholder="Your Email" required aria-label="Your Email">  
-      <input type="text" name="phone" placeholder="Your Phone" aria-label="Your Phone">  
-      <textarea name="message" placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>  
-      <input type="text" name="_gotcha" style="display:none">  
-      <button type="submit">Send Message</button>  
-    </form>  
-    <p>Email: <a href="mailto:manishkshyp0123@gmail.com">manishkshyp0123@gmail.com</a></p>  
-  </section>    <section class="extras">  
-    <h2>More About Me</h2>  
-    <ul>  
-      <li><strong>Languages Known:</strong> Hindi, English</li>  
-      <li><strong>Freelance Status:</strong> Available for projects</li>  
-      <li><strong>Location:</strong> India (Open to remote work)</li>  
-      <li><strong>Favorite Tools:</strong> Jupyter Notebook, VS Code, Excel, Power BI</li>  
-    </ul>  
-  </section>    <script>  
-    const certificates = [  
-      'certificates/cert1.jpg',  
-      'certificates/cert2.jpg',  
-      'certificates/cert3.jpg',  
-      'certificates/cert4.jpg',  
-      'certificates/cert5.jpg',  
-      'certificates/cert6.jpg',  
-      'certificates/cert7.jpg',  
-      'certificates/cert8.jpg'  
-    ];  
-  
-    let currentCert = 0;  
-    const certImg = document.getElementById('cert-slide');  
-    const prevBtn = document.getElementById('prev');  
-    const nextBtn = document.getElementById('next');  
-  
-    function updateCertificate() {  
-      certImg.classList.remove('fade-in');  
-      setTimeout(() => {  
-        certImg.src = certificates[currentCert];  
-        certImg.alt = `Achievement Certificate ${currentCert + 1}`;  
-        certImg.classList.add('fade-in');  
-      }, 500);  
-    }  
-  
-    function showPrev() {  
-      currentCert = (currentCert - 1 + certificates.length) % certificates.length;  
-      updateCertificate();  
-      resetAutoSlide();  
-    }  
-  
-    function showNext() {  
-      currentCert = (currentCert + 1) % certificates.length;  
-      updateCertificate();  
-      resetAutoSlide();  
-    }  
-  
-    prevBtn.onclick = showPrev;  
-    nextBtn.onclick = showNext;  
-  
-    let slideInterval = setInterval(showNext, 4000);  
-  
-    function resetAutoSlide() {  
-      clearInterval(slideInterval);  
-      slideInterval = setInterval(showNext, 4000);  
-    }  
-  
-    updateCertificate();  
-  </script>  </body>  
-</html>  Separate code in html, css ,hs file
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <p>“Manish is a detail-oriented data scientist with exceptional analytical skills.”</p>
+    <p>“His ability to turn complex data into understandable visuals is outstanding.”</p>
+    <p>“Manish’s dashboards have helped our team make faster and smarter decisions.”</p>
+  </section>
 
+  <section class="education" id="education">
+    <h2>Education</h2>
+    <div class="edu-item">
+      <h3>B.Tech in Computer Science</h3>
+      <p><strong>Specialization:</strong> Artificial Intelligence, Machine Learning, Deep Learning</p>
+      <p><strong>Institution:</strong> Teerthanker Mahaveer University, Moradabad</p>
+      <p><strong>Focus Areas:</strong> Data Science, Python, Machine Learning</p>
+    </div>
+  </section>
+
+  <section class="achievements" id="achievements">
+    <h2>Achievements</h2>
+    <div class="slideshow-container">
+      <img id="cert-slide" src="certificates/cert1.jpg" alt="Achievement Certificate">
+      <a id="prev">❮</a>
+      <a id="next">❯</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xqalpopv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone">
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="text" name="_gotcha" style="display:none">
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:manishkshyp0123@gmail.com">manishkshyp0123@gmail.com</a></p>
+  </section>
+
+  <section class="extras">
+    <h2>More About Me</h2>
+    <ul>
+      <li><strong>Languages Known:</strong> Hindi, English</li>
+      <li><strong>Freelance Status:</strong> Available for projects</li>
+      <li><strong>Location:</strong> India (Open to remote work)</li>
+      <li><strong>Favorite Tools:</strong> Jupyter Notebook, VS Code, Excel, Power BI</li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
