@@ -9,7 +9,7 @@ particlesJS('particles-js', {
     line_linked: { enable: false },
     move: { enable: true, speed: 0.8, direction: 'none', random: true }
   },
-  interactivity: {
+  interactivity:{
     detect_on: 'canvas',
     events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
     modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
