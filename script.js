@@ -24,7 +24,7 @@ function updateCertificate() {
 }
 
 function showPrev() {
-  currentCert = (currentCert - 1 + certificates.length) % certificates.length;
+  currentCert = (currentCert - 1 + certificates.length) % certificates.length; 
   updateCertificate();
   resetAutoSlide();
 }
