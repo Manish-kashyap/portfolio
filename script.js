@@ -1,3 +1,4 @@
+
 // Particles.js
 particlesJS('particles-js', {
   particles: {
@@ -9,7 +10,7 @@ particlesJS('particles-js', {
     line_linked: { enable: false },
     move: { enable: true, speed: 0.8, direction: 'none', random: true }
   },
-  interactivity:{
+  interactivity: {
     detect_on: 'canvas',
     events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
     modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
@@ -18,7 +19,7 @@ particlesJS('particles-js', {
 
 // Smooth Scroll
 document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
@@ -28,27 +29,33 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 // Section Header Animation
 const headers = document.querySelectorAll('h2');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.3 });
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
 headers.forEach(header => observer.observe(header));
 
 // Skill Progress Animation
 const progressFills = document.querySelectorAll('.progress-fill');
-const progressObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      progressFills.forEach(fill => {
-        fill.style.width = fill.getAttribute('data-width');
-      });
-      progressObserver.disconnect();
-    }
-  });
-}, { threshold: 0.5 });
+const progressObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        progressFills.forEach(fill => {
+          fill.style.width = fill.getAttribute('data-width');
+        });
+        progressObserver.disconnect();
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
 progressObserver.observe(document.querySelector('.skill-progress'));
 
 // Testimonial Carousel
@@ -59,16 +66,16 @@ function showTestimonial(index) {
   testimonialSlides.forEach(slide => slide.classList.remove('active'));
   testimonialSlides[index].classList.add('active');
 }
-document.getElementById('t-prev').onclick = () => {
+document.getElementById('t-prev').addEventListener('click', () => {
   currentTestimonial = (currentTestimonial - 1 + testimonialSlides.length) % testimonialSlides.length;
   showTestimonial(currentTestimonial);
   resetTestimonialInterval();
-};
-document.getElementById('t-next').onclick = () => {
+});
+document.getElementById('t-next').addEventListener('click', () => {
   currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
   showTestimonial(currentTestimonial);
   resetTestimonialInterval();
-};
+});
 let testimonialInterval = setInterval(() => {
   currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
   showTestimonial(currentTestimonial);
@@ -114,8 +121,8 @@ function showNext() {
   updateCertificate();
   resetAutoSlide();
 }
-prevBtn.onclick = showPrev;
-nextBtn.onclick = showNext;
+prevBtn.addEventListener('click', showPrev);
+nextBtn.addEventListener('click', showNext);
 let slideInterval = setInterval(showNext, 4000);
 function resetAutoSlide() {
   clearInterval(slideInterval);
@@ -128,24 +135,30 @@ const scrollTopBtn = document.querySelector('.scroll-top');
 window.addEventListener('scroll', () => {
   scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
-scrollTopBtn.onclick = () => {
+scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+});
 
 // Form Modal
 const modal = document.querySelector('.modal');
 const openModalBtn = document.querySelector('.open-modal');
 const closeModalBtn = document.querySelector('.close-modal');
-openModalBtn.onclick = () => modal.style.display = 'block';
-closeModalBtn.onclick = () => modal.style.display = 'none';
-window.onclick = (e) => { if (e.target == modal) modal.style.display = 'none'; };
+openModalBtn.addEventListener('click', () => (modal.style.display = 'block'));
+closeModalBtn.addEventListener('click', () => (modal.style.display = 'none'));
+window.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
+});
 
 // Form Success Feedback
 const form = document.getElementById('contact-form');
 const successMessage = document.querySelector('.form-success');
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', e => {
+  e.preventDefault(); // Prevent default form submission for testing
   setTimeout(() => {
     successMessage.style.display = 'block';
-    setTimeout(() => { successMessage.style.display = 'none'; modal.style.display = 'none'; }, 3000);
+    setTimeout(() => {
+      successMessage.style.display = 'none';
+      modal.style.display = 'none';
+    }, 3000);
   }, 1000);
 });
